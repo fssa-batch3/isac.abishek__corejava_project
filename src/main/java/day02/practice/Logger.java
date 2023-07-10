@@ -1,5 +1,11 @@
 package day02.practice;
-
+class node{
+	int val=1;
+	int node(){
+		System.out.println(val);
+		return  val;
+	}
+}
 public class Logger {
 	public static void debug (String msg) {
 		System.out.println("DEBUG: " + msg);
@@ -36,4 +42,6 @@ public class Logger {
 	info("information");
 	info(100);
 	}
+
+	
 }
