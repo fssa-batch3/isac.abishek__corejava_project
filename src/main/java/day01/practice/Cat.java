@@ -1,5 +1,7 @@
 package day01.practice;
 
+import java.util.Scanner;
+
 public class Cat {
     // Attributes
     private int age;
@@ -41,14 +43,15 @@ public class Cat {
     	Cat cat2 = new Cat(3, "black");
 
         // Print the attributes of each Dog
-        System.out.println("Dog 1:");
+        System.out.println("Cat 1:");
         System.out.println("Age: " + cat1.age());
         System.out.println("Color: " + cat1.getColor());
 		System.out.print("Speaks: "); cat1.speak();
 
-        System.out.println("Dog 2:");
+        System.out.println("Cat 2:");
         System.out.println("Age: " + cat2.age());
         System.out.println("Color: " +cat2.getColor());
 		System.out.println("Speaks: ") ; cat2.speak();
     }
+
 }
