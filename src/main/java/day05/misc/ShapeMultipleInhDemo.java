@@ -23,10 +23,11 @@ class Square extends Rectangle2 {
 
 public class ShapeMultipleInhDemo {
 	public static void main(String[] args) {
-//		Shape rec = new Rectangle2();
-		Square square = new Square();
+		Shape rec = new Square();
+//		Square square = new Square();
 	   
-//		rec.draw();
-		square.draw();
+		rec.draw();
+	
+//		square.draw();
 	}
 }
