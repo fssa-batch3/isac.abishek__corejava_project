@@ -4,42 +4,44 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Tasks {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scan =new Scanner(System.in);
-		String yes="yes";
-		System.out.println("Add your tasks");
-	     ArrayList<String> tasks= new ArrayList<String>();//new arraylist
-	     ArrayList<String> prority= new ArrayList<String>();
-		while (scan.hasNext()&& yes.equals("yes")) {
-			
-			String taskName=scan.nextLine();
-			 tasks.add(taskName);
-			 System.out.println("Add proirty level");
-			 String prorityy=scan.nextLine();
-			  prority.add(prorityy);
-			  System.out.println("continue yes or no");
-				 String yesorno=scan.nextLine();
-				 
-			   yes=yesorno;
-			   if(yesorno.equals("yes")) {
-				   System.out.println("Add your tasks");
-			   }
-			  
-			 
-			 
-		}
-
-			
-			for(int j=0;j<tasks.size();j++) {  
-				System.out.println(j+"  "+tasks.get(j)+"priority Level"+prority.get(j));
-				
-			}
-		
-		
-	     
-
-	}
-
+    
+    private ArrayList<String> tasks;
+    private ArrayList<String> priority;
+    
+    public Tasks() {
+        tasks = new ArrayList<>();
+        priority = new ArrayList<>();
+    }
+    
+    public void addTasks() {
+        Scanner scan = new Scanner(System.in);
+        String yes = "yes";
+        
+        while (yes.equals("yes")) {
+            System.out.println("Add your task:");
+            String taskName = scan.nextLine();
+            tasks.add(taskName);
+            
+            System.out.println("Add priority level:");
+            String priorityLevel = scan.nextLine();
+            priority.add(priorityLevel);
+            
+            System.out.println("Continue? (yes/no)");
+            yes = scan.nextLine();
+        }
+        
+        scan.close();
+    }
+    
+    public void displayTasks() {
+        for (int j = 0; j < tasks.size(); j++) {
+            System.out.println(j + " " + tasks.get(j) + " Priority Level: " + priority.get(j));
+        }
+    }
+    
+    public static void main(String[] args) {
+        Tasks taskManager = new Tasks();
+        taskManager.addTasks();
+        taskManager.displayTasks();
+    }
 }
