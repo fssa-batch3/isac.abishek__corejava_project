@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-public class TaskFinderTest {
+public class TaskFinderTest { 
 	
 		@Test
 		public void testAddTask() {
@@ -18,6 +18,17 @@ public class TaskFinderTest {
 			finder.taskadd("Study");
 		Assertions.assertTrue(finder.findTaskByName("study"));
 	}
+		@Test
+		public void testInValidaddTask() {
+			try {
+				finder.taskadd("");
+			}
+			catch(Exception e) {
+				Assertions.assertEquals("TaskName cant be null",e.getMessage());
+			}
+				
+			
+		}
 		@Test
 		public void testInValidTask() {
 			  
