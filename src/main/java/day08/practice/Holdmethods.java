@@ -1,11 +1,13 @@
 package day08.practice;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Holdmethods{
-	static HashMap<String, ArrayList<String>> countMap = new HashMap<String, ArrayList<String>>();
+	static TreeMap<String, ArrayList<String>> countMap = new TreeMap<String, ArrayList<String>>();
 static	Scanner sc = new Scanner(System.in);
 static	int count = 0;
 	static boolean addMethods() {
@@ -35,9 +37,11 @@ static	int count = 0;
 		return true;
 	}
 	static boolean View() {
-		System.out.println(countMap.keySet());
+//		System.out.println(countMap.keySet());
 		for (String n : countMap.keySet()) {
-			System.out.println(n + " : " + countMap.get(n));
+			List <String> sorted=countMap.get(n);
+		Collections.sort(sorted);
+			System.out.println(n + " : " + sorted);
 		}
 		return true;
 	}

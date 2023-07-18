@@ -25,7 +25,10 @@ public class HashWorks{
 	}
 	
 	static boolean viewMap() { 
-		System.out.println(countMap);
+		for(String x:countMap.keySet()) {
+			System.out.println(countMap.get(x));
+		}
+		
 		return true;
 	}
 } 
