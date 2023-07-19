@@ -5,20 +5,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-class Accounts implements Comparable<Accounts> {
+class Tasks implements Comparable<Tasks> {
 
 	private int id;
 	private String name;
 	private int priority;
 	private LocalDate date; 
 
-	public Accounts(int id, String name, LocalDate date, int priority) {
+	public Tasks(int id, String name, LocalDate date, int priority) {
 
 		this.id = id;
 		this.name = name;
 		this.date = date;
 		this.priority=priority;
 	} 
+	public Tasks() {
+		
+	}
 
 	public int getId() {
 		return id;
@@ -32,7 +35,7 @@ class Accounts implements Comparable<Accounts> {
 		return name;
 	}
 
-	public void setProprity(int priority) {
+	public void setPrority(int priority) {
 		this.priority = priority;
 	}
 	public int getPriority() {
@@ -53,7 +56,7 @@ class Accounts implements Comparable<Accounts> {
 	}
 
 	@Override
-	public int compareTo(Accounts o) {
+	public int compareTo(Tasks o) {
 
 		if (this.date.equals(o.getDate())) {
 			
@@ -76,38 +79,14 @@ class Accounts implements Comparable<Accounts> {
 				return 1;
 			}
 			
-		}
+		} 
 	}
 
-	@Override
+	@Override 
 	public String toString() {
-		return "Accounts [id" + id + ", name=" + name + ", date=" + date + "]";
+		return "Tasks [id" + id + ", name=" + name + ", date=" + date + "]";
 	}
 
 }
 
-public class SortByDateAndPrority {
-	public static void main(String[] args) {
-         LocalDate input=LocalDate.of(2023,2,22);
-		Accounts acct1 = new Accounts(1, "Naresh", input,5);
-		 LocalDate input1=LocalDate.of(2023,2,24);
-		Accounts acct2 = new Accounts(2, "Arun", input1,5);
-		 LocalDate input2=LocalDate.of(2023,2,23);
-		Accounts acct3 = new Accounts(4, "Karthik", input2,5);
-		 LocalDate input3=LocalDate.of(2023,2,23); 
-			Accounts acct4 = new Accounts(4, "kingston", input2,4);
- 
-		List<Accounts> list = new ArrayList<Accounts>();
-		list.add(acct1);
-		list.add(acct2);
-		list.add(acct3);
-		list.add(acct4);
 
-		Collections.sort(list);
-		
-		//Printing numbers sorted by balance
-		System.out.println(list);
-
-	}
-
-}
