@@ -29,7 +29,5 @@ public class taskFinder {
 	public static void main(String[] args) {
 		finder.taskadd("study");
 		 finder.findTaskByName("Study"); 
-		 
-		  
 	  } 
 }

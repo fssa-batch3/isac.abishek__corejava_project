@@ -11,6 +11,7 @@ public class TestTreeSet {
         cityNames.add("Delhi");
         cityNames.add("Chennai");
         cityNames.add("Bangalore");
+        cityNames.add("Bangalore");
  
         for (String cityName : cityNames) {
             System.out.println(cityName);

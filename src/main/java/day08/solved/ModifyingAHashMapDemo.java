@@ -18,9 +18,9 @@ public class ModifyingAHashMapDemo {
 		deptMap.put("HR", hrCount);
 
 		// Iterate
-		for (String deptName : deptMap.keySet()) {
+		for (String deptName : deptMap.keySet()) { 
 
-			Integer count = deptMap.get(deptName);
+			int count = deptMap.get(deptName); 
 			System.out.println("Department Name:" + deptName + " and Employee Count :" + count);
 
 		}

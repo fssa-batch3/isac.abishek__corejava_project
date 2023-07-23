@@ -26,9 +26,5 @@ public class SortList {
 	  
 	   SortList.getElements();
 	   SortList.viewsortedElements();
-		   
-	   
-	   
-	   
 }
 }

@@ -8,7 +8,7 @@ public class SortingInReverseOrderDemo {
 		ArrayList<String> deptNames = new ArrayList<String>();
 		deptNames.add("B");
 		deptNames.add("D");
-		deptNames.add("");
+		deptNames.add("A");
 		deptNames.add("C");
 		 
 		System.out.println("Before Sorting: " + deptNames);

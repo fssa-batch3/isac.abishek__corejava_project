@@ -1,5 +1,6 @@
 package day06.solved;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,7 +10,9 @@ public class ArrayToList {
 	  deptNames[0] = "CSE";
 	  deptNames[1] = "EEE";
 	  deptNames[2] = "MECH";
-	  List<String> list = Arrays.asList(deptNames);
+	  List list = new ArrayList<>(Arrays.asList(deptNames));
+	  System.out.println(list);
+	  list.add("isac");
 	  System.out.println(list);
 }
 }

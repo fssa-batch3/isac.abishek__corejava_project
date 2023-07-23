@@ -19,13 +19,15 @@ class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id ;
+        if(emailId==user.emailId) 
+        	return true;
+            return false;
     }
 
     // Don't forget to override hashCode whenever you override equals
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(this.emailId);
     }
 } 
 

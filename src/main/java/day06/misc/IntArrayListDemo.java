@@ -13,7 +13,5 @@ public class IntArrayListDemo {
 		System.out.println(arrInt);
 		arrInt.remove(Integer.valueOf(3));
 		System.out.println(arrInt);
-		
-		
 	}
 }

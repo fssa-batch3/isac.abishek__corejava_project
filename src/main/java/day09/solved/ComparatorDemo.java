@@ -24,6 +24,7 @@ class Student {
  * Comparator to compare each student object by their Age
  */
 class AgeComparator implements Comparator<Student> {
+	@Override
 	public int compare(Student s1, Student s2) {
 		if (s1.age == s2.age)
 			return 0;
@@ -38,14 +39,11 @@ class AgeComparator implements Comparator<Student> {
  * Comparator to compare each student object by their name
  */
 class NameComparator implements Comparator<Student> {
+	@Override
 	public int compare(Student s1, Student s2) {
 		return s1.name.compareTo(s2.name);
 	}
 }
-
-/**
- * 
- */
 public class ComparatorDemo {
 	public static void main(String args[]) {
 

@@ -3,6 +3,7 @@ package day07.practice;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.TreeSet;
 
 class Task {
@@ -27,19 +28,23 @@ class Task {
 	public LocalDate getDeadline() {
 		return deadline;
 	}
+	
+	@Override
 	public int hashCode() {
-	    return this.getId();
+	    return Objects.hash(this.name,this.deadline);
 	}
+	@Override
 	public boolean equals(Object obj) {
-		Task e = null;
-	    if(obj instanceof Task){
-	        e = (Task) obj;
-	    }
-	    if(this.getId() == e.getId()){
-	        return true;
-	    } else {
-	        return false;
-	    }
+		if (this == obj) 
+			return true; 
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		 Task other = (Task) obj;
+		if (name !=other.name && deadline !=other.deadline)
+			return false;
+		return true;
 	}
 
 }
@@ -80,15 +85,15 @@ public class RemoveDuplicateTask {
 		System.out.println();
 		Array2.add(task1);
 		
-		Array2.add(new Task(1, "Study", input1));
-		Array2.add(new Task(1, "Study", input1));
+		Array2.add(new Task(2, "Study", input1));
+		Array2.add(new Task(3, "Study", input1));
 		
 
 
 		LocalDate input2 = LocalDate.of(2022, 11, 07);
 		Task task2 = new Task(2, "Bharu", input2);
 		Array2.add(task2);
-		Array2.add(new Task(2, "Bharu", input2));
+		Array2.add(new Task(3, "Bharu", input2));
 		
 		
 		TreeSetDemo2.printTasks();

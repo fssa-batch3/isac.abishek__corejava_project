@@ -9,6 +9,7 @@ public class CollectionSortingDemo {
 		cityNames.add("Delhi");
 		cityNames.add("Chennai");
 		cityNames.add("Bangalore");
+		cityNames.add("Bangalore");
 
 		System.out.println("Before Sort:" + cityNames);
 		Collections.sort(cityNames);
